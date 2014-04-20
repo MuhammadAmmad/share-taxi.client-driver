@@ -22,6 +22,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
@@ -31,10 +32,15 @@ public class UpdateServerOnLocationChangeService extends Service{
 	
 	private Thread serviceThread;
 	
+	private final long MINIMUM_TIME_FOR_UPDATE = 1000;//by milliseconds
+	private final long MINIMUM_DISTANCE_FOR_UPDATE = 1;//by meters
+	
     private ServiceLocationListener locationListener;
     private LocationManager locationManager;
     private String provider;
     private Intent intent;
+    private boolean isActive = false;
+    
 	
 	@Override
 	public void onCreate() 
@@ -58,19 +64,27 @@ public class UpdateServerOnLocationChangeService extends Service{
 	  @Override
 	  public int onStartCommand(Intent intent, int flags, int startId) 
 	  {
-	      Toast.makeText(getBaseContext(), "service ************************  starting", Toast.LENGTH_SHORT).show();
+		  if(isActive == false){
+			  isActive = true;
+			  Toast.makeText(getBaseContext(), "service ************************  starting", Toast.LENGTH_SHORT).show();
 
-//	      serviceThread.start();
+//		      serviceThread.start();
+		      
+		      locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MINIMUM_TIME_FOR_UPDATE, MINIMUM_DISTANCE_FOR_UPDATE, locationListener);
+
+		      // If we get killed, after returning from here, restart
+		      return START_STICKY;
+		  } else {
+			  return START_STICKY;
+		}
 	      
-	      locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 1, locationListener);
-
-	      // If we get killed, after returning from here, restart
-	      return START_STICKY;
 	  }
 
 	  @Override
 	  public void onDestroy() {
-	    Toast.makeText(this, "stopped sending location updates to ShareTaxiServer", Toast.LENGTH_SHORT).show();
+		  locationManager.removeUpdates(locationListener);
+		  super.onDestroy();
+	      //Toast.makeText(getApplicationContext(), "stopped sending location updates to ShareTaxiServer", Toast.LENGTH_SHORT).show();
 	  }
 
 	@Override
@@ -88,13 +102,17 @@ public class UpdateServerOnLocationChangeService extends Service{
 		public ServiceLocationListener(Context context){
 			this.context = context;
 		}
+		
 		@Override
 		  public void onLocationChanged(Location location) {
 		    double lat = location.getLatitude();
 		    double lng = location.getLongitude();
 		    AndroidId = Settings.Secure.getString(getContentResolver(),
        	         Settings.Secure.ANDROID_ID);
-		    sendLocToServer(new DataStructure(lat, lng, AndroidId, "4", "N"));
+		    //sendLocToServer(new DataStructure(lat, lng, AndroidId, "4", "N"));
+		    UpdateServerTask serverTask = new UpdateServerTask();
+		    DataStructure dataStructure = new DataStructure(lat, lng, AndroidId, "4", "N");
+		    serverTask.execute(new DataStructure[]{dataStructure});
 		  }
 
 		  @Override
@@ -136,7 +154,7 @@ public class UpdateServerOnLocationChangeService extends Service{
 			pairs.add(new BasicNameValuePair("direction", curr_location.direction));
 			httppost.setEntity(new UrlEncodedFormEntity(pairs));
 			
-			Toast.makeText(getBaseContext(), "gps info gathered by now is: long "+ longitudeStr + ", lat " + latitudeStr, Toast.LENGTH_SHORT).show();
+			//Toast.makeText(getBaseContext(), "gps info gathered by now is: long "+ longitudeStr + ", lat " + latitudeStr, Toast.LENGTH_SHORT).show();
 			
 			// Execute HTTP Post Request
 			HttpResponse response = httpclient.execute(httppost);
@@ -149,4 +167,21 @@ public class UpdateServerOnLocationChangeService extends Service{
 
 	}
 	  
+	private class UpdateServerTask extends AsyncTask<DataStructure, Void, Void>{
+
+		@Override
+		protected Void doInBackground(DataStructure... dataStructures){			
+			try {				
+				for(DataStructure dataStructure : dataStructures){
+					sendLocToServer(dataStructure);
+				}
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+			
+			return null;
+		}
+		
+	}
+	
 }

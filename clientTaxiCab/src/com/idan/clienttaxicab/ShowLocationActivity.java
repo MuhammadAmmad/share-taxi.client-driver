@@ -12,6 +12,7 @@ public class ShowLocationActivity extends Activity  {
 	/** Called when the activity is first created. */
 	private Button btnStartService;
 	private Button btnStopService;
+	private Intent intent;
 
 	  @Override
 	  public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class ShowLocationActivity extends Activity  {
 			@Override
 			public void onClick(View arg0) {	
 				
-				Intent intent = new Intent(getBaseContext(), UpdateServerOnLocationChangeService.class);
+				intent = new Intent(getBaseContext(), UpdateServerOnLocationChangeService.class);
 			    startService(intent);
 		        Toast.makeText(getApplicationContext(), "starting service", Toast.LENGTH_SHORT).show();
 
@@ -39,9 +40,8 @@ public class ShowLocationActivity extends Activity  {
 			
 			@Override
 			public void onClick(View arg0) {	
-				
-				Intent intent = new Intent(getBaseContext(), UpdateServerOnLocationChangeService.class);
-			    stopService(intent);
+			
+			    stopService(new Intent(getBaseContext(), UpdateServerOnLocationChangeService.class));
 		        Toast.makeText(getApplicationContext(), "stopping service", Toast.LENGTH_SHORT).show();
 
 				
