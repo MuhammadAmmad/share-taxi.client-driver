@@ -26,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ShowLocationActivity extends Activity {
-	
+
 	private Button btnStartService;
 	private Button btnStopService;
 	private Intent intent;
@@ -34,6 +34,7 @@ public class ShowLocationActivity extends Activity {
 	protected String currentState;
 	private boolean enableMenu = true;
 	private TextView currentStateTextView;
+	private String deviceID;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -45,15 +46,17 @@ public class ShowLocationActivity extends Activity {
 		btnStartService.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if(verifyLineNumberSelected()){
+				if (verifyLineNumberSelected()) {
 					setOnlineState();
+
 					intent = new Intent(getBaseContext(),
 							UpdateServerOnLocationChangeService.class);
 					intent.putExtra("lineNumber", lineNumber);
 					startService(intent);
 					Toast.makeText(getApplicationContext(), "starting service",
 							Toast.LENGTH_SHORT).show();// TODO add some static
-														// notice for the current
+														// notice for the
+														// current
 														// app situation
 				}
 			}
@@ -75,7 +78,7 @@ public class ShowLocationActivity extends Activity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
-		
+
 		currentStateTextView = (TextView) findViewById(R.id.currentState);
 		currentStateTextView.setText(currentState);
 	}
@@ -87,12 +90,12 @@ public class ShowLocationActivity extends Activity {
 	}
 
 	protected boolean verifyLineNumberSelected() {
-		if(lineNumber == null){
-			Toast.makeText(getApplicationContext(), "Please select a line number",
-					Toast.LENGTH_SHORT).show();
+		if (lineNumber == null) {
+			Toast.makeText(getApplicationContext(),
+					"Please select a line number", Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		
+
 		return true;
 	}
 
@@ -202,4 +205,5 @@ public class ShowLocationActivity extends Activity {
 	// protected void onPause() {
 	// super.onPause();
 	// }
+
 }
