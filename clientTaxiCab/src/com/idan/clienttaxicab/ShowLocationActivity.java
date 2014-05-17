@@ -14,7 +14,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -35,18 +38,36 @@ public class ShowLocationActivity extends Activity {
 	private boolean enableMenu = true;
 	private TextView currentStateTextView;
 	private String deviceID;
+	
+	private LocationManager locationManager;
+	private LocationListener locationListener;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_location);
 		this.currentState = "Offline";
+		
+		// Get the location manager
+				locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+				 if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+				 {
+				 promptUserToEnableGPS();
+				 }
+				// Define the criteria how to select the location provider -> use
+				// default
+				// Criteria criteria = new Criteria();
+				// provider = locationManager.getBestProvider(criteria, false);
+
+				locationListener = new GPSLocationListener(getBaseContext());
 
 		btnStartService = (Button) findViewById(R.id.buttonStart);
 		btnStartService.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				if (verifyLineNumberSelected()) {
+					 
 					setOnlineState();
 
 					intent = new Intent(getBaseContext(),
@@ -58,6 +79,8 @@ public class ShowLocationActivity extends Activity {
 														// notice for the
 														// current
 														// app situation
+					
+					
 				}
 			}
 		});
@@ -205,5 +228,21 @@ public class ShowLocationActivity extends Activity {
 	// protected void onPause() {
 	// super.onPause();
 	// }
+	
+	private void promptUserToEnableGPS()
+	 {
+		Toast.makeText(getApplicationContext(), "GPS not enabled, please...",
+				Toast.LENGTH_SHORT).show();
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Intent gpsOptionsIntent  = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+		 startActivity(gpsOptionsIntent);
+	 }
 
 }

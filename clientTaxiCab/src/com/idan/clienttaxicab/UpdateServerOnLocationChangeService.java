@@ -1,18 +1,5 @@
 package com.idan.clienttaxicab;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -42,16 +29,21 @@ public class UpdateServerOnLocationChangeService extends Service {
 		// Get the location manager
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-		 if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-		 {
-		 promptUserToEnableGPS();
-		 }
+		// if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+		// {
+		// promptUserToEnableGPS();
+		// }
+		 
+		 locationListener = new GPSLocationListener(getBaseContext());
+		
+		
+		
 		// Define the criteria how to select the location provider -> use
 		// default
 		// Criteria criteria = new Criteria();
 		// provider = locationManager.getBestProvider(criteria, false);
 
-		locationListener = new GPSLocationListener(getBaseContext());
+		
 
 		// serviceThread = new Thread(new Runnable() {
 		// public void run() {
@@ -62,20 +54,17 @@ public class UpdateServerOnLocationChangeService extends Service {
 
 	}
 
-	 private void promptUserToEnableGPS()
-	 {
-		 
-		 Toast.makeText(getApplicationContext(),
-					 "stopped sending location updates to ShareTaxiServer",
-					 Toast.LENGTH_SHORT).show();
-//	 Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
-//	 startActivity(intent);
-	 }
+	 
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		if (isActive == false) {
 			isActive = true;
+			
+			locationManager.requestLocationUpdates(
+					LocationManager.GPS_PROVIDER, MINIMUM_TIME_FOR_UPDATE,
+					MINIMUM_DISTANCE_FOR_UPDATE, locationListener);
+			
 			this.lineNumber = intent.getStringExtra("lineNumber");
 			locationListener.setLineNumber(this.lineNumber);
 			Toast.makeText(getBaseContext(),
@@ -83,7 +72,24 @@ public class UpdateServerOnLocationChangeService extends Service {
 					Toast.LENGTH_SHORT).show();
 			
 			
-			Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+			Location location = null;
+			for(int i = 0; i < 20; i++)
+			{
+				location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+				if (location == null)
+				{
+					try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				else
+				{
+					break;
+				}
+			}
 			
 			
 			this.deviceID = Settings.Secure.getString(
@@ -94,9 +100,7 @@ public class UpdateServerOnLocationChangeService extends Service {
 //			DataStructure dataStructure = new DataStructure(31.11, 31.11, this.deviceID, this.lineNumber);
 			serverTask.execute(new DataStructure[] { dataStructure });
 
-			locationManager.requestLocationUpdates(
-					LocationManager.GPS_PROVIDER, MINIMUM_TIME_FOR_UPDATE,
-					MINIMUM_DISTANCE_FOR_UPDATE, locationListener);
+			
 
 
 			// If we get killed, after returning from here, restart
