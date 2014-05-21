@@ -1,5 +1,7 @@
 package com.idan.clienttaxicab;
 
+import com.idan.clienttaxicab.ShowLocationActivity.ResponseReceiver;
+
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -57,8 +59,48 @@ public class UpdateServerOnLocationChangeService extends Service {
 	 
 
 	@Override
-	public int onStartCommand(Intent intent, int flags, int startId) {
-		if (isActive == false) {
+	public int onStartCommand(Intent intent, int flags, int startId) 
+	{
+		if (isActive == false) 
+		{
+			Location location = null;
+			for (int i = 0; i < 10; i++)
+			{
+				location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+				if (location == null)
+				{
+					try 
+					{
+						Thread.sleep(100);
+					} 
+					catch (InterruptedException e) 
+					{
+						e.printStackTrace();
+					}
+				}
+				else
+				{
+					break;
+				}
+			}
+			
+			if (location == null)
+			{
+				Toast.makeText(getBaseContext(),
+						"there is an error getting the device's location, please try again later",
+						Toast.LENGTH_SHORT).show();
+				
+				// processing done here….
+				Intent broadcastIntent = new Intent();
+				broadcastIntent.setAction(ResponseReceiver.ACTION_RESP);
+				broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
+				sendBroadcast(broadcastIntent);
+				
+//				isActive = false;
+				
+				return START_REDELIVER_INTENT;
+			}
+			
 			isActive = true;
 			
 			locationManager.requestLocationUpdates(
@@ -68,28 +110,8 @@ public class UpdateServerOnLocationChangeService extends Service {
 			this.lineNumber = intent.getStringExtra("lineNumber");
 			locationListener.setLineNumber(this.lineNumber);
 			Toast.makeText(getBaseContext(),
-					"service ************************  starting",
+					"drive safe!",
 					Toast.LENGTH_SHORT).show();
-			
-			
-			Location location = null;
-			for(int i = 0; i < 20; i++)
-			{
-				location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-				if (location == null)
-				{
-					try {
-						Thread.sleep(500);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				else
-				{
-					break;
-				}
-			}
 			
 			
 			this.deviceID = Settings.Secure.getString(
@@ -104,9 +126,9 @@ public class UpdateServerOnLocationChangeService extends Service {
 
 
 			// If we get killed, after returning from here, restart
-			return START_STICKY;
+			return START_REDELIVER_INTENT;
 		} else {
-			return START_STICKY;
+			return START_REDELIVER_INTENT;
 		}
 
 	}

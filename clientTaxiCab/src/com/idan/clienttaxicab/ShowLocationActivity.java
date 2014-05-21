@@ -14,8 +14,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.AsyncTask;
@@ -38,57 +40,65 @@ public class ShowLocationActivity extends Activity {
 	private boolean enableMenu = true;
 	private TextView currentStateTextView;
 	private String deviceID;
+	private ResponseReceiver receiver;
 	
 	private LocationManager locationManager;
 	private LocationListener locationListener;
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) 
+	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_location);
 		this.currentState = "Offline";
 		
+		IntentFilter filter = new IntentFilter(ResponseReceiver.ACTION_RESP);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        receiver = new ResponseReceiver();
+        registerReceiver(receiver, filter);
+		
 		// Get the location manager
-				locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		
+		// Define the criteria how to select the location provider -> use
+		// default
+		// Criteria criteria = new Criteria();
+		// provider = locationManager.getBestProvider(criteria, false);
 
-				 if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-				 {
-				 promptUserToEnableGPS();
-				 }
-				// Define the criteria how to select the location provider -> use
-				// default
-				// Criteria criteria = new Criteria();
-				// provider = locationManager.getBestProvider(criteria, false);
-
-				locationListener = new GPSLocationListener(getBaseContext());
+		locationListener = new GPSLocationListener(getBaseContext());
 
 		btnStartService = (Button) findViewById(R.id.buttonStart);
-		btnStartService.setOnClickListener(new View.OnClickListener() {
+		btnStartService.setOnClickListener(new View.OnClickListener() 
+		{
 			@Override
-			public void onClick(View arg0) {
-				if (verifyLineNumberSelected()) {
-					 
-					setOnlineState();
+			public void onClick(View arg0) 
+			{
+				if (verifyLineNumberSelected()) 
+				{
+					
+					 if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+					 {
+						setOnlineState();
 
-					intent = new Intent(getBaseContext(),
-							UpdateServerOnLocationChangeService.class);
-					intent.putExtra("lineNumber", lineNumber);
-					startService(intent);
-					Toast.makeText(getApplicationContext(), "starting service",
-							Toast.LENGTH_SHORT).show();// TODO add some static
-														// notice for the
-														// current
-														// app situation
-					
-					
+						intent = new Intent(getBaseContext(),
+								UpdateServerOnLocationChangeService.class);
+						intent.putExtra("lineNumber", lineNumber);
+						startService(intent);
+					 }
+					 else
+					 {
+						 promptUserToEnableGPS();
+					 }
 				}
 			}
 		});
 
 		btnStopService = (Button) findViewById(R.id.buttonStop);
-		btnStopService.setOnClickListener(new View.OnClickListener() {
+		btnStopService.setOnClickListener(new View.OnClickListener() 
+		{
 			@Override
-			public void onClick(View arg0) {
+			public void onClick(View arg0) 
+			{
 				lineNumber = null;
 				setOffineState();
 				SendStopSignalToServerTask sendStopSignalToServerTask = new SendStopSignalToServerTask();
@@ -106,7 +116,7 @@ public class ShowLocationActivity extends Activity {
 		currentStateTextView.setText(currentState);
 	}
 
-	protected void setOffineState() {
+	public void setOffineState() {
 		enableLineNumberSelection();
 		currentState = "Offline";
 		currentStateTextView.setText(currentState);
@@ -244,5 +254,14 @@ public class ShowLocationActivity extends Activity {
 		Intent gpsOptionsIntent  = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 		 startActivity(gpsOptionsIntent);
 	 }
+	
+	public class ResponseReceiver extends BroadcastReceiver {
+		public static final String ACTION_RESP =    
+			      "com.idan.clienttaxicab.intent.action.INITIAL_DB_POST_FAILED";
+		   @Override
+		    public void onReceive(Context context, Intent intent) {
+		       setOffineState();
+		    }
+		}
 
 }
