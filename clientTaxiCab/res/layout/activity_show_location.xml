@@ -2,36 +2,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    
-    <Button
-        android:id="@+id/buttonStart"
-        style="?android:attr/buttonStyleSmall"
+    android:orientation="vertical"
+    android:background="@drawable/img" >
+
+    <Switch
+        android:id="@+id/switchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonStop"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="38dp"
-        android:text="Start" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:textOff="@string/toggleOff"
+        android:textOn="@string/toggleOn" />
 
-    <Button
-        android:id="@+id/buttonStop"
-        style="?android:attr/buttonStyleSmall"
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonStart"
+        android:layout_alignLeft="@+id/switchButton"
+        android:layout_below="@+id/switchButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:text="Stop" />
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/currentState"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="102dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <RadioButton
+            android:id="@+id/line_4a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/line_4a" />
+
+        <RadioButton
+            android:id="@+id/line_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/line_4" />
+
+        <RadioButton
+            android:id="@+id/line_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/line_5" />
+    </RadioGroup>
     
 </RelativeLayout>

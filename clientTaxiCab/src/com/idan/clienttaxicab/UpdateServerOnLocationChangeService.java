@@ -15,8 +15,8 @@ public class UpdateServerOnLocationChangeService extends Service {
 
 	// private Thread serviceThread;
 
-	private final long MINIMUM_TIME_FOR_UPDATE = 1000;// by milliseconds
-	private final long MINIMUM_DISTANCE_FOR_UPDATE = 1;// by meters
+	private final long MINIMUM_TIME_FOR_UPDATE = 5000;// by milliseconds
+	private final long MINIMUM_DISTANCE_FOR_UPDATE = 5;// by meters
 
 	private GPSLocationListener locationListener;
 	private LocationManager locationManager;
@@ -63,15 +63,19 @@ public class UpdateServerOnLocationChangeService extends Service {
 	{
 		if (isActive == false) 
 		{
+			locationManager.requestLocationUpdates(
+					LocationManager.GPS_PROVIDER, MINIMUM_TIME_FOR_UPDATE,
+					MINIMUM_DISTANCE_FOR_UPDATE, locationListener);
+			
 			Location location = null;
-			for (int i = 0; i < 10; i++)
+			for (int i = 0; i < 60; i++)
 			{
 				location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 				if (location == null)
 				{
 					try 
 					{
-						Thread.sleep(100);
+						Thread.sleep(500);
 					} 
 					catch (InterruptedException e) 
 					{
@@ -90,6 +94,8 @@ public class UpdateServerOnLocationChangeService extends Service {
 						"there is an error getting the device's location, please try again later",
 						Toast.LENGTH_SHORT).show();
 				
+				locationManager.removeUpdates(locationListener);
+				
 				// processing done here….
 				Intent broadcastIntent = new Intent();
 				broadcastIntent.setAction(ResponseReceiver.ACTION_RESP);
@@ -103,9 +109,9 @@ public class UpdateServerOnLocationChangeService extends Service {
 			
 			isActive = true;
 			
-			locationManager.requestLocationUpdates(
-					LocationManager.GPS_PROVIDER, MINIMUM_TIME_FOR_UPDATE,
-					MINIMUM_DISTANCE_FOR_UPDATE, locationListener);
+//			locationManager.requestLocationUpdates(
+//					LocationManager.GPS_PROVIDER, MINIMUM_TIME_FOR_UPDATE,
+//					MINIMUM_DISTANCE_FOR_UPDATE, locationListener);
 			
 			this.lineNumber = intent.getStringExtra("lineNumber");
 			locationListener.setLineNumber(this.lineNumber);
