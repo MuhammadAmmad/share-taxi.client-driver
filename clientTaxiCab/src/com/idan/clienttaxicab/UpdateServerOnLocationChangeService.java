@@ -138,7 +138,7 @@ public class UpdateServerOnLocationChangeService extends Service {
 		}
 
 	}
-
+	
 	@Override
 	public void onDestroy() {
 		this.isActive = false;

@@ -28,6 +28,7 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.RadioButton;
@@ -48,6 +49,8 @@ public class ShowLocationActivity extends Activity {
 	private RadioButton radiobutton4;
 	private RadioButton radiobutton4a;
 	private RadioButton radiobutton5;
+	private Button numberOfSeatsLeftButton;
+	private int numberOfSeatsLeft;
 	
 	private LocationManager locationManager;
 
@@ -66,6 +69,17 @@ public class ShowLocationActivity extends Activity {
 		radiobutton4 = (RadioButton) findViewById(R.id.line_4);
 		radiobutton4a = (RadioButton) findViewById(R.id.line_4a);
 		radiobutton5 = (RadioButton) findViewById(R.id.line_5);
+		
+		numberOfSeatsLeftButton = (Button) findViewById(R.id.passengerReportButton);
+		
+		numberOfSeatsLeftButton.setOnClickListener(new View.OnClickListener() 
+		{
+			@Override
+			public void onClick(View v) 
+			{
+				openDialog();
+			}
+		});
 
 		mySwitch = (Switch) findViewById(R.id.switchButton);
 		mySwitch.setChecked(switchChecked);
@@ -265,5 +279,33 @@ public class ShowLocationActivity extends Activity {
         receiver = new ResponseReceiver();
         registerReceiver(receiver, filter);
 	}
+	
+	private void openDialog() {
+		new AlertDialog.Builder(this)
+	    .setTitle("דווח לנוסעים")
+	    .setMessage("?כמה מקומות פנויים")
+	    .setNeutralButton("2", new OnClickListener()
+	    {
+	    	public void onClick(DialogInterface arg0, int arg1) 
+	        {
+	    		numberOfSeatsLeft = 2;
+	        }
+	    })
+	    .setNegativeButton("1", new OnClickListener()
+	    {
 
+	        public void onClick(DialogInterface arg0, int arg1) 
+	        {
+	        	numberOfSeatsLeft = 1;
+	        }
+	    })
+	    .setPositiveButton("3+", new OnClickListener() 
+	    {
+
+	        public void onClick(DialogInterface arg0, int arg1) 
+	        {
+	        	numberOfSeatsLeft = 3;
+	        }
+	    }).create().show();
+	}
 }

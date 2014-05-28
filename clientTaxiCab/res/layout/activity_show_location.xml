@@ -2,18 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@drawable/img" >
-
-    <Switch
-        android:id="@+id/switchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
-        android:textOff="@string/toggleOff"
-        android:textOn="@string/toggleOn" />
+    android:background="@drawable/img"
+    android:orientation="vertical" >
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -46,5 +36,23 @@
             android:onClick="onRadioButtonClicked"
             android:text="@string/line_5" />
     </RadioGroup>
-    
+
+    <Button
+        android:id="@+id/passengerReportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/switchButton"
+        android:layout_centerVertical="true"
+        android:text="@string/passengerReportButton" />
+
+    <Switch
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:textOff="@string/toggleOff"
+        android:textOn="@string/toggleOn" />
+
 </RelativeLayout>
