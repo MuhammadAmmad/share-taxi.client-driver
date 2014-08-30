@@ -1,0 +1,25 @@
+09:00:12 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.cpp:7:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp:20:19: fatal error: conio.h: No such file or directory
+ #include "conio.h"
+                   ^
+compilation terminated.
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+
+09:00:14 Build Finished (took 2s.679ms)
+

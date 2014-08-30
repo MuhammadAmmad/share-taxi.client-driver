@@ -1,0 +1,311 @@
+package com.idan.clienttaxicab;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.location.LocationManager;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
+import android.widget.Toast;
+
+public class ShowLocationActivity extends Activity {
+
+	private Intent intent;
+	protected String lineNumber = null;
+	private boolean switchChecked = false;
+	private boolean userEnabledGPS = false;
+	private boolean isActive = false;
+	private ResponseReceiver receiver;
+	private Switch mySwitch;
+	private RadioGroup radiogroup;
+	private RadioButton radiobutton4;
+	private RadioButton radiobutton4a;
+	private RadioButton radiobutton5;
+	private Button numberOfSeatsLeftButton;
+	private int numberOfSeatsLeft;
+	
+	private LocationManager locationManager;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) 
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_show_location);
+		
+		registerBroadcastReceiver();
+		
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		
+		radiogroup = (RadioGroup) findViewById(R.id.radioGroup);
+		
+		radiobutton4 = (RadioButton) findViewById(R.id.line_4);
+		radiobutton4a = (RadioButton) findViewById(R.id.line_4a);
+		radiobutton5 = (RadioButton) findViewById(R.id.line_5);
+		
+		numberOfSeatsLeftButton = (Button) findViewById(R.id.passengerReportButton);
+		
+		numberOfSeatsLeftButton.setOnClickListener(new View.OnClickListener() 
+		{
+			@Override
+			public void onClick(View v) 
+			{
+				openDialog();
+			}
+		});
+
+		mySwitch = (Switch) findViewById(R.id.switchButton);
+		mySwitch.setChecked(switchChecked);
+		
+		//attach a listener to check for changes in state
+	    mySwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() 
+		{
+			   @Override
+			   public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) 
+			   {
+			    if(isChecked)
+			    {
+			    	if (verifyLineNumberSelected()) 
+					{
+						
+						 if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
+						 {
+							setOnlineState();
+
+							intent = new Intent(getBaseContext(),
+									UpdateServerOnLocationChangeService.class);
+							intent.putExtra("lineNumber", lineNumber);
+							startService(intent);
+						 }
+						 else
+						 {
+							 setOffineState();
+							 promptUserToEnableGPS();
+						 }
+					}
+			    	else
+			    	{
+			    		mySwitch.setChecked(false);
+			    	}
+			    }
+			    else
+			    {
+			    	if (isActive)
+			    	{
+			    		lineNumber = null;
+						setOffineState();
+						SendStopSignalToServerTask sendStopSignalToServerTask = new SendStopSignalToServerTask();
+						String androidID = Settings.Secure.getString(
+								getContentResolver(), Settings.Secure.ANDROID_ID);
+						sendStopSignalToServerTask.execute(androidID);
+						stopService(new Intent(getBaseContext(),
+								UpdateServerOnLocationChangeService.class));
+						Toast.makeText(getApplicationContext(), "stopping service",
+								Toast.LENGTH_SHORT).show();
+			    	}
+			    }
+
+			   }
+
+			  });
+	}
+	
+	@Override
+	public void onBackPressed() 
+	{
+	    moveTaskToBack(true);
+	}
+
+	public void setOffineState() 
+	{
+		 int selectedid = radiogroup.getCheckedRadioButtonId();
+		    if (selectedid > 0) {
+		    	radiogroup.clearCheck();
+		    }
+		enableRadioGroup();
+		isActive = false;
+		this.lineNumber = null;
+		mySwitch.setChecked(false);
+	}
+
+	protected boolean verifyLineNumberSelected() 
+	{
+		if (lineNumber == null) 
+		{
+			Toast.makeText(getApplicationContext(),
+					"Please select a line number", Toast.LENGTH_SHORT).show();
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public void onRadioButtonClicked(View view) 
+	{
+	    switch(view.getId()) 
+	    {
+	        case R.id.line_4:
+	        	Toast.makeText(this, "You selected line number 4",
+						Toast.LENGTH_SHORT).show();
+				this.lineNumber = "4";
+	            break;
+	        case R.id.line_4a:
+	        	Toast.makeText(this, "You selected line number 4א",
+						Toast.LENGTH_SHORT).show();
+				this.lineNumber = "4a";
+	            break;
+	        case R.id.line_5:
+	        	Toast.makeText(this, "You selected line number 5",
+						Toast.LENGTH_SHORT).show();
+				this.lineNumber = "5";
+	            break;
+	    }
+	}
+	
+	public void enableRadioGroup() 
+	{
+	      radiobutton4.setEnabled(true);
+	      radiobutton4a.setEnabled(true);
+	      radiobutton5.setEnabled(true);
+	}
+	
+	public void disableRadioGroup() 
+	{
+	      radiobutton4.setEnabled(false);
+	      radiobutton4a.setEnabled(false);
+	      radiobutton5.setEnabled(false);
+	}
+
+	protected void setOnlineState() 
+	{
+		disableRadioGroup();
+		isActive = true;
+		mySwitch.setChecked(true);
+	}
+
+	private class SendStopSignalToServerTask extends
+			AsyncTask<String, Void, Void>// TODO do do
+	{
+		@Override
+		protected Void doInBackground(String... deviceIDs) {
+			try {
+				for (String deviceID : deviceIDs) {
+					sendStopSignalToServer(deviceID);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		}
+	}
+
+	public void sendStopSignalToServer(String deviceID) 
+	{
+		final HttpClient httpclient = new DefaultHttpClient();
+		HttpPost httppost = new HttpPost(
+				"http://sharetaxi6.appspot.com/stopDevice");
+
+		try {
+			// Add your data
+			List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+			pairs.add(new BasicNameValuePair("androidID", deviceID));
+			httppost.setEntity(new UrlEncodedFormEntity(pairs));
+
+			// Execute HTTP Post Request
+			HttpResponse response = httpclient.execute(httppost);
+
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+		}
+
+	}
+	
+	private void promptUserToEnableGPS()
+	{
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Intent gpsOptionsIntent  = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+		startActivity(gpsOptionsIntent);
+	 }
+	
+	public class ResponseReceiver extends BroadcastReceiver 
+	{
+		public static final String ACTION_RESP =    
+			      "com.idan.clienttaxicab.intent.action.INITIAL_DB_POST_FAILED";
+		   @Override
+		    public void onReceive(Context context, Intent intent) {
+		       setOffineState();
+		    }
+	}
+	
+	private void registerBroadcastReceiver() 
+	{
+		IntentFilter filter = new IntentFilter(ResponseReceiver.ACTION_RESP);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        receiver = new ResponseReceiver();
+        registerReceiver(receiver, filter);
+	}
+	
+	private void openDialog() {
+		new AlertDialog.Builder(this)
+	    .setTitle("דווח לנוסעים")
+	    .setMessage("?כמה מקומות פנויים")
+	    .setNeutralButton("1", new OnClickListener()
+	    {
+	    	public void onClick(DialogInterface arg0, int arg1) 
+	        {
+	    		numberOfSeatsLeft = 1;
+	        }
+	    })
+	    .setNegativeButton("2", new OnClickListener()
+	    {
+
+	        public void onClick(DialogInterface arg0, int arg1) 
+	        {
+	        	numberOfSeatsLeft = 2;
+	        }
+	    })
+	    .setPositiveButton("3+", new OnClickListener() 
+	    {
+
+	        public void onClick(DialogInterface arg0, int arg1) 
+	        {
+	        	numberOfSeatsLeft = 3;
+	        }
+	    }).create().show();
+	}
+}

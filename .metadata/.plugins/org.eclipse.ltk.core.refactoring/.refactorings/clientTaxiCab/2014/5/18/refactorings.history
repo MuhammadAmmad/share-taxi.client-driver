@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;com.idan.clienttaxicab.GPSLocationListener.sendLocToServer(...)&apos; to &apos;sendLocationUpdateToServer&apos;&#x0D;&#x0A;- Original project: &apos;clientTaxiCab&apos;&#x0D;&#x0A;- Original element: &apos;com.idan.clienttaxicab.GPSLocationListener.sendLocToServer(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;com.idan.clienttaxicab.GPSLocationListener.sendLocationUpdateToServer(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;sendLocToServer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;com.idan.clienttaxicab{GPSLocationListener.java[GPSLocationListener~sendLocToServer~QDataStructure;" name="sendLocationUpdateToServer" references="true" stamp="1399034649086" version="1.0"/>
+</session>

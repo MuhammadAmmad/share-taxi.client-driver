@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">נהג מונית</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="toggleOff">Off Duty</string>
+    <string name="toggleOn">Driving</string>
+    <string name="line_4">4</string>
+    <string name="line_4a">4א</string>
+    <string name="line_5">5</string>
+    <string name="passengerReportButton">any room left?</string>
+
+</resources>

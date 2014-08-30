@@ -1,0 +1,2336 @@
+17:40:59 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+17:41:04 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+17:41:11 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+17:41:19 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+17:42:27 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+18:24:04 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+18:24:12 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+18:24:15 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:14:40 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void get_dns_servers()':
+../src/DNS_Client.cpp:342:12: error: 'dns_servers' was not declared in this scope
+     strcpy(dns_servers[0] , "208.67.222.222");
+            ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:355:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+14:15:47 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:355:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:16:06 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:17:49 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:18:07 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:19:38 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:19:46 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:23:44 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:357:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:24:40 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:24:46 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:25:01 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:26:42 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:358:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:27:08 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+14:27:13 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:358:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:29:26 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:29:39 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+14:29:42 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:358:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:31:00 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:31:12 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:15 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:358:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:32:27 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:36 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:34:19 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'int main(int, char**)':
+../src/DNS_Client.cpp:52:14: error: incompatible types in assignment of 'const char [15]' to 'unsigned char [100]'
+     hostname = "www.google.com";
+              ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:360:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+14:37:53 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'int main(int, char**)':
+../src/DNS_Client.cpp:43:31: error: invalid conversion from 'const char*' to 'unsigned char*' [-fpermissive]
+     unsigned char *hostname = "www.google.com";
+                               ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:360:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+14:43:01 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:360:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:45:29 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:48:50 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:361:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+14:49:14 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+14:58:28 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:361:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+15:03:08 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+15:03:34 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+15:10:21 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ngethostbyname(unsigned char*, int)':
+../src/DNS_Client.cpp:91:5: error: expected ';' before 'printf'
+     printf("Resolving %s" , host);
+     ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:373:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+15:10:52 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+15:10:56 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+In file included from ../src/DNS_Client.cpp:9:0:
+../src/DNS_Client.h:32:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.h:33:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.h:34:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ngethostbyname(unsigned char*, int)':
+../src/DNS_Client.cpp:91:5: error: expected ';' before 'printf'
+     printf("Resolving %s" , host);
+     ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:373:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+15:22:35 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp:15:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Ws2_32.lib")
+ ^
+../src/DNS_Client.cpp:16:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "Mswsock.lib")
+ ^
+../src/DNS_Client.cpp:17:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+ #pragma comment (lib, "AdvApi32.lib")
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:376:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++  -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+15:27:41 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:376:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+15:29:44 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:376:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+15:31:42 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+15:33:53 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:376:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+20:17:37 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:364:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+20:18:01 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+20:20:19 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+20:20:23 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+20:20:45 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+20:21:31 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:364:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+20:25:26 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+21:25:43 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:133:49: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+     host_ent->h_name = ReadName(reader,buf,&stop);
+                                                 ^
+../src/DNS_Client.cpp:148:38: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             host_ent->h_addr_list[i] = (unsigned char*)malloc(ntohs(answers[i].resource->data_len));
+                                      ^
+../src/DNS_Client.cpp:163:38: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             host_ent->h_addr_list[i] = answers[i].rdata;
+                                      ^
+../src/DNS_Client.cpp:77:44: warning: unused variable 'addit' [-Wunused-variable]
+     struct RES_RECORD answers[20],auth[20],addit[20]; //the replies from the DNS server
+                                            ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:292:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+21:28:58 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:29:02 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:134:49: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+     host_ent->h_name = ReadName(reader,buf,&stop);
+                                                 ^
+../src/DNS_Client.cpp:140:50: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+         answers[i].name=ReadName(reader,buf,&stop);
+                                                  ^
+../src/DNS_Client.cpp:148:30: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             answers[i].rdata = (unsigned char*)malloc(ntohs(answers[i].resource->data_len));
+                              ^
+../src/DNS_Client.cpp:149:38: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             host_ent->h_addr_list[i] = (unsigned char*)malloc(ntohs(answers[i].resource->data_len));
+                                      ^
+../src/DNS_Client.cpp:163:57: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             answers[i].rdata = ReadName(reader,buf,&stop);
+                                                         ^
+../src/DNS_Client.cpp:172:47: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+         auth[i].name=ReadName(reader,buf,&stop);
+                                               ^
+../src/DNS_Client.cpp:178:48: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+         auth[i].rdata=ReadName(reader,buf,&stop);
+                                                ^
+../src/DNS_Client.cpp: In function 'char* ReadName(unsigned char*, unsigned char*, int*)':
+../src/DNS_Client.cpp:230:70: error: new declaration 'char* ReadName(unsigned char*, unsigned char*, int*)'
+ char* ReadName(unsigned char* reader,unsigned char* buffer,int* count)
+                                                                      ^
+../src/DNS_Client.cpp:32:16: error: ambiguates old declaration 'unsigned char* ReadName(unsigned char*, unsigned char*, int*)'
+ unsigned char* ReadName (unsigned char*,unsigned char*,int*);
+                ^
+../src/DNS_Client.cpp:237:10: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+     name = (unsigned char*)malloc(256);
+          ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:293:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+21:30:24 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:30:27 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:148:30: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             answers[i].rdata = (unsigned char*)malloc(ntohs(answers[i].resource->data_len));
+                              ^
+../src/DNS_Client.cpp:149:38: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             host_ent->h_addr_list[i] = (unsigned char*)malloc(ntohs(answers[i].resource->data_len));
+                                      ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:293:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+21:30:45 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:30:47 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:293:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:134:50: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     host_ent->h_name = ReadName(reader,buf,&stop);
+                                                  ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+21:31:01 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+21:31:50 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+21:35:12 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:35:15 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'std::string ReadName(std::string, std::string, int*)':
+../src/DNS_Client.cpp:237:30: error: invalid conversion from 'void*' to 'const char*' [-fpermissive]
+     name = (string)malloc(256);
+                              ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:212:5: error:   initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]' [-fpermissive]
+     basic_string<_CharT, _Traits, _Alloc>::
+     ^
+../src/DNS_Client.cpp:242:11: error: no match for 'operator*' (operand type is 'std::string {aka std::basic_string<char>}')
+     while(*reader!=0)
+           ^
+../src/DNS_Client.cpp:244:12: error: no match for 'operator*' (operand type is 'std::string {aka std::basic_string<char>}')
+         if(*reader>=192)
+            ^
+../src/DNS_Client.cpp:246:23: error: no match for 'operator*' (operand type is 'std::string {aka std::basic_string<char>}')
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                       ^
+../src/DNS_Client.cpp:246:46: error: no match for 'operator+' (operand types are 'std::string {aka std::basic_string<char>}' and 'int')
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                              ^
+../src/DNS_Client.cpp:246:46: note: candidates are:
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_algobase.h:67:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/char_traits.h:39,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:333:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:333:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2365:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2365:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   mismatched types 'const std::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:692:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:692:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   mismatched types 'const _CharT*' and 'std::basic_string<char>'
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:708:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:708:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   mismatched types 'const std::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   mismatched types 'const _CharT*' and 'int'
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   deduced conflicting types for parameter '_CharT' ('char' and 'int')
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_algobase.h:67:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/char_traits.h:39,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:902:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:902:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:246:47: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>' and 'int'
+             offset = (*reader)*256 + *(reader+1) - 49152; //49152 = 11000000 00000000 ;)
+                                               ^
+../src/DNS_Client.cpp:247:29: error: no match for 'operator+' (operand types are 'std::string {aka std::basic_string<char>}' and 'unsigned int')
+             reader = buffer + offset - 1;
+                             ^
+../src/DNS_Client.cpp:247:29: note: candidates are:
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_algobase.h:67:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/char_traits.h:39,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:333:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:333:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'unsigned int'
+             reader = buffer + offset - 1;
+                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2365:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2365:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   mismatched types 'const std::basic_string<_CharT, _Traits, _Alloc>' and 'unsigned int'
+             reader = buffer + offset - 1;
+                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:692:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:692:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   mismatched types 'const _CharT*' and 'std::basic_string<char>'
+             reader = buffer + offset - 1;
+                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:708:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:708:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   mismatched types 'const std::basic_string<_CharT, _Traits, _Alloc>' and 'unsigned int'
+             reader = buffer + offset - 1;
+                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   mismatched types 'const _CharT*' and 'unsigned int'
+             reader = buffer + offset - 1;
+                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   deduced conflicting types for parameter '_CharT' ('char' and 'unsigned int')
+             reader = buffer + offset - 1;
+                               ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_algobase.h:67:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/char_traits.h:39,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:902:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:902:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:247:31: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>' and 'unsigned int'
+             reader = buffer + offset - 1;
+                               ^
+../src/DNS_Client.cpp:252:23: error: no match for 'operator*' (operand type is 'std::string {aka std::basic_string<char>}')
+             name[p++]=*reader;
+                       ^
+../src/DNS_Client.cpp:255:24: error: no match for 'operator+' (operand types are 'std::string {aka std::basic_string<char>}' and 'int')
+         reader = reader+1;
+                        ^
+../src/DNS_Client.cpp:255:24: note: candidates are:
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_algobase.h:67:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/char_traits.h:39,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:333:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:333:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'int'
+         reader = reader+1;
+                         ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2365:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2365:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   mismatched types 'const std::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+         reader = reader+1;
+                         ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:692:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:692:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   mismatched types 'const _CharT*' and 'std::basic_string<char>'
+         reader = reader+1;
+                         ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:53:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:708:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.tcc:708:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   mismatched types 'const std::basic_string<_CharT, _Traits, _Alloc>' and 'int'
+         reader = reader+1;
+                         ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   mismatched types 'const _CharT*' and 'int'
+         reader = reader+1;
+                         ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/string:52:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/locale_classes.h:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/ios_base.h:41,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:42,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   deduced conflicting types for parameter '_CharT' ('char' and 'int')
+         reader = reader+1;
+                         ^
+In file included from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_algobase.h:67:0,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/char_traits.h:39,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ios:40,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/ostream:38,
+                 from /usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/iostream:39,
+                 from ../src/DNS_Client.h:10,
+                 from ../src/DNS_Client.cpp:9:
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:902:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+     ^
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.2/include/c++/bits/stl_iterator.h:902:5: note:   template argument deduction/substitution failed:
+../src/DNS_Client.cpp:255:25: note:   mismatched types 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>' and 'int'
+         reader = reader+1;
+                         ^
+../src/DNS_Client.cpp:270:40: error: invalid cast from type 'std::string {aka std::basic_string<char>}' to type 'const char*'
+     for(i=0;i<(int)strlen((const char*)name);i++)
+                                        ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:293:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+21:35:54 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:133:49: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+     host_ent->h_name = ReadName(reader,buf,&stop);
+                                                 ^
+../src/DNS_Client.cpp:139:50: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+         answers[i].name=ReadName(reader,buf,&stop);
+                                                  ^
+../src/DNS_Client.cpp:147:30: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             answers[i].rdata = (unsigned char*)malloc(ntohs(answers[i].resource->data_len));
+                              ^
+../src/DNS_Client.cpp:160:57: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+             answers[i].rdata = ReadName(reader,buf,&stop);
+                                                         ^
+../src/DNS_Client.cpp:168:47: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+         auth[i].name=ReadName(reader,buf,&stop);
+                                               ^
+../src/DNS_Client.cpp:174:48: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+         auth[i].rdata=ReadName(reader,buf,&stop);
+                                                ^
+../src/DNS_Client.cpp:220:5: error: expected ';' before 'return'
+     return;
+     ^
+../src/DNS_Client.cpp:77:44: warning: unused variable 'addit' [-Wunused-variable]
+     struct RES_RECORD answers[20],auth[20],addit[20]; //the replies from the DNS server
+                                            ^
+../src/DNS_Client.cpp:221:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:289:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+21:36:32 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:36:40 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:133:49: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+     host_ent->h_name = ReadName(reader,buf,&stop);
+                                                 ^
+../src/DNS_Client.cpp:77:44: warning: unused variable 'addit' [-Wunused-variable]
+     struct RES_RECORD answers[20],auth[20],addit[20]; //the replies from the DNS server
+                                            ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:289:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+21:37:06 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:77:44: warning: unused variable 'addit' [-Wunused-variable]
+     struct RES_RECORD answers[20],auth[20],addit[20]; //the replies from the DNS server
+                                            ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:289:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:134:35: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     host_ent->h_addrtype = AF_INET;
+                                   ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+21:37:22 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:37:25 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:77:44: warning: unused variable 'addit' [-Wunused-variable]
+     struct RES_RECORD answers[20],auth[20],addit[20]; //the replies from the DNS server
+                                            ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:289:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:220:12: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     return host_ent;
+            ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+21:38:43 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:289:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:220:12: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     return host_ent;
+            ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+21:56:19 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:299:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:133:58: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     host_ent->h_name = (char *)ReadName(reader,buf,&stop);
+                                                          ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+21:58:58 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:59:09 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:133:50: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+     char * domainName = ReadName(reader,buf,&stop);
+                                                  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:301:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+21:59:30 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+21:59:33 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:301:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:134:58: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     host_ent->h_name = (char *)malloc(strlen(domainName));
+                                                          ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:02:47 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:72:40: error: conversion from 'hostent*' to non-scalar type 'hostent' requested
+  struct hostent h = new struct hostent();
+                                        ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:302:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+22:03:22 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+22:03:25 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:72:18: warning: unused variable 'h' [-Wunused-variable]
+  struct hostent *h = new struct hostent();
+                  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:302:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:135:58: warning: 'host_ent' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     host_ent->h_name = (char *)malloc(strlen(domainName));
+                                                          ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:04:01 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+22:04:04 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:301:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:04:41 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:09:56 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:302:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:10:10 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:10:29 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+22:10:31 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:302:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:11:39 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:302:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:12:10 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:13:39 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:303:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:15:34 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:304:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:17:28 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:19:44 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:304:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:24:02 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:24:13 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:36:56 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:73:35: warning: variable 'auth' set but not used [-Wunused-but-set-variable]
+     struct RES_RECORD answers[20],auth[20]; //the replies from the DNS server
+                                   ^
+../src/DNS_Client.cpp: In function 'void ChangetoDnsNameFormat(unsigned char*, unsigned char*)':
+../src/DNS_Client.cpp:297:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(i = 0 ; i < strlen((char*)host) ; i++)
+                                       ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:40:27 **** Clean-only build of configuration Debug for project DNS_Client ****
+make clean 
+rm -rf  ./src/DNS_Client.o  ./src/DNS_Client.d  DNS_Client.exe
+ 
+22:40:56 **** Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:73:35: warning: variable 'auth' set but not used [-Wunused-but-set-variable]
+     struct RES_RECORD answers[20],auth[20]; //the replies from the DNS server
+                                   ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:43:24 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:73:35: warning: variable 'auth' set but not used [-Wunused-but-set-variable]
+     struct RES_RECORD answers[20],auth[20]; //the replies from the DNS server
+                                   ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:45:54 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+22:50:53 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:73:35: warning: variable 'auth' set but not used [-Wunused-but-set-variable]
+     struct RES_RECORD answers[20],auth[20]; //the replies from the DNS server
+                                   ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+22:51:30 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:73:35: warning: variable 'auth' set but not used [-Wunused-but-set-variable]
+     struct RES_RECORD answers[20],auth[20]; //the replies from the DNS server
+                                   ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+23:24:02 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'int main(int, char**)':
+../src/DNS_Client.cpp:61:17: error: 'answers' was not declared in this scope
+     freeAnswers(answers);
+                 ^
+../src/DNS_Client.cpp: In function 'void freeAnswers(RES_RECORD*)':
+../src/DNS_Client.cpp:399:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (i=0; i < sizeof(answers); i++)
+                              ^
+../src/DNS_Client.cpp:397:9: warning: unused variable 'j' [-Wunused-variable]
+  int i, j;
+         ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+23:24:52 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:77:35: warning: variable 'auth' set but not used [-Wunused-but-set-variable]
+     struct RES_RECORD answers[20],auth[20]; //the replies from the DNS server
+                                   ^
+../src/DNS_Client.cpp: In function 'void freeAnswers(RES_RECORD*)':
+../src/DNS_Client.cpp:399:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (i=0; i < sizeof(answers); i++)
+                              ^
+../src/DNS_Client.cpp:397:9: warning: unused variable 'j' [-Wunused-variable]
+  int i, j;
+         ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+23:24:56 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+23:25:15 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+23:27:26 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'void freeAnswers(RES_RECORD*)':
+../src/DNS_Client.cpp:399:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (i=0; i < sizeof(answers); i++)
+                              ^
+../src/DNS_Client.cpp:397:9: warning: unused variable 'j' [-Wunused-variable]
+  int i, j;
+         ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+23:27:59 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+23:29:46 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+23:30:08 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+11:05:38 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:216:39: error: cannot convert 'DNS_HEADER*' to 'hostent*' for argument '1' to 'void printAnswers(hostent*)'
+     printAnswers(dns, answers, auth, a);
+                                       ^
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1
+11:05:55 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp: In function 'hostent* dnsQuery(unsigned char*)':
+../src/DNS_Client.cpp:216:39: error: cannot convert 'DNS_HEADER*' to 'hostent*' for argument '1' to 'void printAnswers(hostent*)'
+     printAnswers(dns, answers, auth, a);
+                                       ^
+make: *** [src/DNS_Client.o] Error 1
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+11:06:30 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.h:11,
+                 from ../src/DNS_Client.cpp:9:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+Finished building: ../src/DNS_Client.cpp
+ 
+Building target: DNS_Client.exe
+Invoking: Cygwin C++ Linker
+g++ -L../"Ws2_32.lib" -L../"Mswsock.lib" -L../"AdvApi32.lib" -o "DNS_Client.exe"  ./src/DNS_Client.o   
+Finished building target: DNS_Client.exe
+ 
+11:06:42 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:46 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+08:59:24 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+make: Nothing to be done for 'all'.
+
+**** Build of configuration Debug for project Hello ****
+
+Nothing to build for project Hello
+09:00:12 **** Incremental Build of configuration Debug for project DNS_Client ****
+make all 
+Building file: ../src/DNS_Client.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/DNS_Client.d" -MT"src/DNS_Client.d" -o "src/DNS_Client.o" "../src/DNS_Client.cpp"
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Idanh\development\workshopRepo\DNS_Client\Debug
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Idanh/development/workshopRepo/DNS_Client/Debug
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+In file included from /usr/include/w32api/winsock2.h:56:0,
+                 from ../src/DNS_Client.cpp:7:
+/usr/include/w32api/psdk_inc/_fd_types.h:100:2: warning: #warning "fd_set and associated macros have been defined in sys/types.      This can cause runtime problems with W32 sockets" [-Wcpp]
+ #warning "fd_set and associated macros have been defined in sys/types.  \
+  ^
+../src/DNS_Client.cpp:20:19: fatal error: conio.h: No such file or directory
+ #include "conio.h"
+                   ^
+compilation terminated.
+src/subdir.mk:18: recipe for target 'src/DNS_Client.o' failed
+make: *** [src/DNS_Client.o] Error 1

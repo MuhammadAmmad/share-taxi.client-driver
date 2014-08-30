@@ -1,6 +1,7 @@
 package com.idan.clienttaxicab;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.IntentService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -51,8 +53,10 @@ public class ShowLocationActivity extends Activity {
 	private RadioButton radiobutton5;
 	private Button numberOfSeatsLeftButton;
 	private int numberOfSeatsLeft;
+	private String deviceID;
 	
 	private LocationManager locationManager;
+	private UpdateFreeSeatsService freeSeatsService;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -60,9 +64,14 @@ public class ShowLocationActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_location);
 		
+		this.deviceID = Settings.Secure.getString(
+				getContentResolver(), Settings.Secure.ANDROID_ID);
+		
 		registerBroadcastReceiver();
 		
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		
+		freeSeatsService = new UpdateFreeSeatsService("free seats service");
 		
 		radiogroup = (RadioGroup) findViewById(R.id.radioGroup);
 		
@@ -225,7 +234,7 @@ public class ShowLocationActivity extends Activity {
 			return null;
 		}
 	}
-
+	
 	public void sendStopSignalToServer(String deviceID) 
 	{
 		final HttpClient httpclient = new DefaultHttpClient();
@@ -284,28 +293,62 @@ public class ShowLocationActivity extends Activity {
 		new AlertDialog.Builder(this)
 	    .setTitle("דווח לנוסעים")
 	    .setMessage("?כמה מקומות פנויים")
-	    .setNeutralButton("2", new OnClickListener()
+	    .setNeutralButton("1", new OnClickListener()
 	    {
 	    	public void onClick(DialogInterface arg0, int arg1) 
 	        {
-	    		numberOfSeatsLeft = 2;
+	    		numberOfSeatsLeft = 1;
+	    		updateNumberOfFreeSeats(numberOfSeatsLeft);
 	        }
 	    })
-	    .setNegativeButton("1", new OnClickListener()
+	    .setNegativeButton("full", new OnClickListener()
 	    {
 
 	        public void onClick(DialogInterface arg0, int arg1) 
 	        {
-	        	numberOfSeatsLeft = 1;
+	        	numberOfSeatsLeft = 0;
+	        	updateNumberOfFreeSeats(numberOfSeatsLeft);
 	        }
 	    })
-	    .setPositiveButton("3+", new OnClickListener() 
+	    .setPositiveButton("2+", new OnClickListener() 
 	    {
 
 	        public void onClick(DialogInterface arg0, int arg1) 
 	        {
-	        	numberOfSeatsLeft = 3;
+	        	numberOfSeatsLeft = 2;
+	        	updateNumberOfFreeSeats(numberOfSeatsLeft);
 	        }
 	    }).create().show();
+	}
+	
+	private void updateNumberOfFreeSeats(int numberOfSeatsLeft) 
+	{
+		Intent mIntent = new Intent(this, UpdateFreeSeatsService.class);
+		mIntent.putExtra("freeSeats", numberOfSeatsLeft);
+		mIntent.putExtra("deviceID", deviceID);
+		startService(mIntent);
+	}
+	
+	@Override
+	protected void onResume ()
+	{
+		super.onResume();
+		if (isActive)
+		{
+			setOnlineState();
+			switch(this.lineNumber) 
+		    {
+		        case "4":
+		        	radiobutton4.setChecked(true);
+		            break;
+		        case "4a":
+		        	radiobutton4a.setChecked(true);
+		            break;
+		        case "5":
+		        	radiobutton5.setChecked(true);
+		            break;
+		    }
+			
+		}
 	}
 }

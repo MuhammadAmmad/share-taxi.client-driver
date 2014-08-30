@@ -16,6 +16,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
         <activity
             android:name="com.idan.clienttaxicab.ShowLocationActivity"
             android:label="@string/app_name" 
@@ -29,6 +30,9 @@
         <service android:name=".UpdateServerOnLocationChangeService"
             	 android:exported="false"
             	 android:enabled="true"/>
+        <service
+            android:name=".UpdateFreeSeatsService"
+            android:exported="false"/>
     </application>
     
 </manifest>
