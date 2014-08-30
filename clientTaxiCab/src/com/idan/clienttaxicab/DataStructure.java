@@ -25,10 +25,10 @@ public class DataStructure {
 		this.lineNum = lineNum;
 	}
 
-	public DataStructure(double latitude, double longitude, String AndroidID) {
+	public DataStructure(double latitude, double longitude, String AndroidID) 
+	{
 		this.AndroidID = AndroidID;
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}
-
 }

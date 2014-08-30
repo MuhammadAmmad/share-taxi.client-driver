@@ -1,11 +1,9 @@
 package com.idan.clienttaxicab;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -16,7 +14,6 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.IntentService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -27,8 +24,6 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -220,7 +215,7 @@ public class ShowLocationActivity extends Activity {
 	}
 
 	private class SendStopSignalToServerTask extends
-			AsyncTask<String, Void, Void>// TODO do do
+			AsyncTask<String, Void, Void>
 	{
 		@Override
 		protected Void doInBackground(String... deviceIDs) {
@@ -242,28 +237,29 @@ public class ShowLocationActivity extends Activity {
 				"http://sharetaxi6.appspot.com/stopDevice");
 
 		try {
-			// Add your data
 			List<NameValuePair> pairs = new ArrayList<NameValuePair>();
 			pairs.add(new BasicNameValuePair("androidID", deviceID));
 			httppost.setEntity(new UrlEncodedFormEntity(pairs));
 
 			// Execute HTTP Post Request
-			HttpResponse response = httpclient.execute(httppost);
+			httpclient.execute(httppost);
 
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (ClientProtocolException e) 
+		{
+		
+		} catch (IOException e) 
+		{
+		
 		}
-
 	}
 	
 	private void promptUserToEnableGPS()
 	{
-		try {
+		try 
+		{
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+		} catch (InterruptedException e) 
+		{
 			e.printStackTrace();
 		}
 		

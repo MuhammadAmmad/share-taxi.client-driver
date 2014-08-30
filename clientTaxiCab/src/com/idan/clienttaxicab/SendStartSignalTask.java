@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -38,8 +37,6 @@ class SendStartSignalTask extends AsyncTask<DataStructure, Void, Void> {
 				"http://sharetaxi6.appspot.com/startDevice");
 
 		try {
-			// Add your data
-//			Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 			List<NameValuePair> pairs = new ArrayList<NameValuePair>();
 			pairs.add(new BasicNameValuePair("longitude", String.valueOf(curr_location.longitude)));
 			pairs.add(new BasicNameValuePair("latitude", String.valueOf(curr_location.latitude)));
@@ -48,15 +45,14 @@ class SendStartSignalTask extends AsyncTask<DataStructure, Void, Void> {
 			httppost.setEntity(new UrlEncodedFormEntity(pairs));
 
 			// Execute HTTP Post Request
-			HttpResponse response = httpclient.execute(httppost); // TODO handle
-																	// response
-																	// from
-																	// server
+			httpclient.execute(httppost);
 
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (ClientProtocolException e) 
+		{
+			
+		} catch (IOException e) 
+		{
+			
 		}
 
 	}

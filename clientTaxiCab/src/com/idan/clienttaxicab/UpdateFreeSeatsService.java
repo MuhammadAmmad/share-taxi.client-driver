@@ -5,7 +5,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -22,12 +21,12 @@ public class UpdateFreeSeatsService extends IntentService
 	private int freeSeats = -1;
 	private String deviceID;
 	
-	public UpdateFreeSeatsService(String name) //name is important only for debugging
+	public UpdateFreeSeatsService(String name)
 	{
 		super(name);
 	}
 	
-	public UpdateFreeSeatsService() //name is important only for debugging
+	public UpdateFreeSeatsService()
 	{
 		super(null);
 	}
@@ -48,15 +47,15 @@ public class UpdateFreeSeatsService extends IntentService
 		pairs.add(new BasicNameValuePair("deviceID", this.deviceID));
 		try {
 			httppost.setEntity(new UrlEncodedFormEntity(pairs));
-			HttpResponse response = httpclient.execute(httppost);
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
+			httpclient.execute(httppost);
+		} catch (UnsupportedEncodingException e) 
+		{
 			e.printStackTrace();
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
+		} catch (ClientProtocolException e) 
+		{
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) 
+		{
 			e.printStackTrace();
 		}
 	}
